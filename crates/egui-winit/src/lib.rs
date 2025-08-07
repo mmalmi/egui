@@ -550,6 +550,14 @@ impl State {
                     consumed: self.egui_ctx.wants_pointer_input(),
                 }
             }
+
+            WindowEvent::InsetsChanged => {
+                self.egui_input.events.push(egui::Event::InsetsChanged);
+                EventResponse {
+                    repaint: true,
+                    consumed: false
+                }
+            }
         }
     }
 
@@ -1958,6 +1966,7 @@ pub fn short_window_event_description(event: &winit::event::WindowEvent) -> &'st
         WindowEvent::ThemeChanged { .. } => "WindowEvent::ThemeChanged",
         WindowEvent::Occluded { .. } => "WindowEvent::Occluded",
         WindowEvent::PanGesture { .. } => "WindowEvent::PanGesture",
+        WindowEvent::InsetsChanged { .. } => "WindowEvent::InsetsChanged",
     }
 }
 
