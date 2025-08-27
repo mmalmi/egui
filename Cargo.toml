@@ -102,7 +102,7 @@ web-sys = "0.3.70"
 web-time = "1.1.0" # Timekeeping for native and web
 wgpu = { version = "24.0.0", default-features = false }
 windows-sys = "0.59"
-winit = { default-features = false, git = "https://github.com/damus-io/winit", rev = "9e4ea9de75222d2523a20f18d3a0a108c573737d" }
+winit = { default-features = false, git = "https://github.com/damus-io/winit", rev = "a07ea4c4d76cdc5306da8e8aabb05cab1a7d8e4d" }
 
 [workspace.lints.rust]
 unsafe_code = "deny"
